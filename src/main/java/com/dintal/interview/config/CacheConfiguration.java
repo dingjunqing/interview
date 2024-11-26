@@ -45,6 +45,7 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.dintal.interview.domain.AIE.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
